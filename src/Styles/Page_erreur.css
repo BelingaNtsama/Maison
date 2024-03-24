@@ -1,0 +1,28 @@
+.error-page{
+    width: 400px;
+    margin: 0 auto;
+border: 2px rgba(255, 0, 0, 0.201) groove;
+
+h1{
+text-align: center;
+background: -webkit-linear-gradient(45deg, rgb(29, 73, 51),red 100%);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+h2,h3{
+    text-align: center;
+    background: -webkit-linear-gradient(45deg, rgb(29, 73, 51), #00ff95fc 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+a{
+    position: relative;
+    display: block;
+    font-size: 21px;
+    color: rgba(0, 0, 255, 0.522);
+    text-decoration: underline;
+    left: 180px;
+}
+
+}

@@ -1,0 +1,47 @@
+.description {
+    background: linear-gradient(to right, rgb(17, 153, 142), rgb(56, 239, 125));
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    top: 60vh;
+    transform: translateX(100vw);
+    animation: description forwards;
+    animation-timeline: scroll();
+    animation-range-start: 100px;
+    animation-range-end: 70vh;
+
+    h1,
+    h2 {
+        text-align: center;
+        color: white;
+    }
+}
+
+@keyframes description {
+    from {
+        transform: translateX(100vw);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+
+    80% {
+
+        transform: translateX(0vw);
+        opacity: 0.8;
+    }
+
+    90% {
+        transform: translateX(0vw);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0vw);
+        opacity: 0;
+
+    }
+}

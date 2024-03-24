@@ -1,0 +1,132 @@
+.planteMobile {
+    width: 350px;
+    height: 450px;
+
+    img {
+        position: relative;
+        left: 15px;
+        width: 320px;
+        height: 320px;
+        border-radius: 20px;
+        transform: scale(1);
+        transition: all 0.8s linear;
+        animation: animer-images linear;
+        animation-timeline: view();
+        animation-range-start: cover 0%;
+        animation-range-end: contain 20%;
+
+    }
+
+    p {
+        position: relative;
+        background-color: rgb(49, 180, 114);
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        border-radius: 20px 20px 20px 0px;
+        width: 25px;
+        padding: 15px;
+        bottom: 341px;
+        left: 278px;
+        z-index: 10;
+        transition: transform 0.8s ease;
+        transform: translate(0);
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        height: 25px;
+        position: relative;
+        bottom: 80px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    form {
+        position: relative;
+        display: flex;
+        bottom: 90px;
+        height: 50px;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+
+        .Boutons {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+
+            .reinitialiser {
+                height: 30px;
+                color: rgba(0, 0, 0, 0.937);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                opacity: 0.8;
+                transition: .5s ease;
+                background-color: rgba(0, 0, 0, 0.045);
+                box-shadow: 1px 1px;
+            }
+        }
+
+        .ajouter {
+            height: 30px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: .5s ease;
+            width: 60%;
+        }
+
+        .ajouter {
+            background-color: rgb(49, 180, 114);
+        }
+
+        .choix {
+            display: flex;
+            justify-content: center;
+
+            .input_shop {
+                height: 30px;
+                width: 280px;
+                position: relative;
+                top: 5px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                box-shadow: 0px 2px 2px 0px;
+                transition: .5s ease;
+                transform: scaleZ(1);
+            }
+
+            .input_shop:active {
+                background-color: rgba(49, 180, 114, 0.163);
+                transform: scaleZ(1.1);
+            }
+        }
+
+
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+
+    img:hover~p {
+        transform: translate(10px, -15px);
+    }
+}
+
+
+@keyframes animer-images {
+    from {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

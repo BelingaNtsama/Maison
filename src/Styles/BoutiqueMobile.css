@@ -1,0 +1,57 @@
+.BoutiqueMobile{
+    position: relative;
+    top: 80vh;
+    width: 100vw;
+    display: flex;justify-content: center;
+    flex-direction: column;
+    z-index: 0;
+
+    .search{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5vh;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+
+            label {
+                font-size: 20px;
+            }
+
+            input {
+                font-size: 20px;
+                height: 30px;
+                width: 280px;
+                position: relative;
+                top: 5px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                box-shadow: 0px 2px 2px 0px;
+                transition: .5s ease;
+                transform: scaleZ(1);
+            }
+
+            input:active {
+                background-color: rgba(49, 180, 114, 0.163);
+                transform: scaleZ(1.1);
+            }
+        }
+    }
+
+    .cadre_plantes {
+        position: relative;
+        top: 5vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        z-index: 1;
+    }
+    }
+

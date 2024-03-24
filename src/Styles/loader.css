@@ -1,0 +1,10 @@
+/* styles.css (ou inline dans votre composant) */
+.loader {
+    display: none; /* Masque le loader par défaut */
+    /* Ajoutez ici les styles pour votre loader (position, animation, etc.) */
+  }
+  
+  .loader.show {
+    display: block; /* Affiche le loader lorsque la page est en cours de chargement */
+  }
+  

@@ -1,0 +1,30 @@
+.Panier {
+    position: relative;
+    width: 20%;
+    transition: all 0.8s ease;
+    
+    background-color: rgb(49, 180, 114);
+
+    button {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        outline: none;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .Panier_ouvert {
+        position: sticky;
+        top: 100px;
+
+        width: 80%;
+        margin: 0 auto ;
+
+        h2 {
+            color: white;
+        }
+    }
+
+}

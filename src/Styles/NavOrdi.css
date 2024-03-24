@@ -1,0 +1,116 @@
+.nav {
+    .fond {
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        animation-name: scroll_fond;
+        animation-fill-mode: forwards;
+        animation-range-start: 100px;
+        animation-range-end: 250px;
+        animation-timeline: scroll();
+    }
+}
+
+#NavOrdi {
+    height: 100px;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    position: absolute;
+    top: 3vh;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: scroll_nav;
+    animation-fill-mode: forwards;
+    animation-range-start: 100px;
+    animation-range-end: 350px;
+    animation-timeline: scroll();
+
+    .logo {
+        display: flex;
+
+        img {
+            width: 90px;
+            height: 90px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 30px;
+            position: relative;
+            top: 25px;
+            right: 28px;
+            height: 35px;
+            background: -webkit-linear-gradient(45deg, rgb(29, 73, 51), #00ff95fc 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+    }
+
+    ul {
+        display: flex;
+        gap: 40px;
+        position: relative;
+        right: 10px;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: 400;
+            animation-name: scroll_lien;
+            animation-fill-mode: forwards;
+            animation-range-start: 100px;
+            animation-range-end: 350px;
+            animation-timeline: scroll();
+        }
+
+        a:hover {
+            background: -webkit-linear-gradient(45deg, rgb(29, 73, 51), #00ff95fc 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .active {
+            background: -webkit-linear-gradient(45deg, rgb(29, 73, 51), #00ff95fc 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+@keyframes scroll_nav {
+    0% {
+        position: absolute;
+    }
+
+    100% {
+        background-color: white;
+        position: fixed;
+        top: 0;
+    }
+}
+
+@keyframes scroll_lien {
+    0% {
+        color: white;
+    }
+
+    100% {
+       color: black;
+    }
+}
+
+@keyframes scroll_fond {
+    0% {
+        height: 100vh;
+    }
+
+    100% {
+        height: 0;
+    }
+}

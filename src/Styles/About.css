@@ -1,0 +1,10 @@
+.About {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 30vh;
+
+    h2,p,h1{
+        text-align: center;
+    }
+}

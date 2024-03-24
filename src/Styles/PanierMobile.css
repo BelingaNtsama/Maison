@@ -1,0 +1,47 @@
+.PanierMobile {
+
+
+    span {
+        position: absolute;
+        right: 0;
+        display: block;
+        font-size: 40px;
+        cursor: pointer;
+        left: 60px;
+        width: 40px;
+        height: 40px;
+    }
+
+    #ouvrir {
+        position: fixed;
+        bottom: 0;
+        left: 80vw;
+        text-align: center;
+        background: -webkit-linear-gradient(45deg, rgb(29, 73, 51), #00ff95be 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 50px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px groove greenyellow;
+    }
+
+    #ouvrir:hover {
+        box-shadow: 1px 0px 3px 0px green;
+    }
+
+    .Panier_ouvert {
+        position: fixed;
+        top: 100px;
+        width: 100vw;
+        height: 80vh;
+        background-color: white;
+        transition: all 0.8s ease;
+    }
+
+    .Panier_fermer {
+        z-index: -1;
+        height: 0;
+    }
+}
