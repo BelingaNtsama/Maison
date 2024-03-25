@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react"
-import { toast, Toaster } from "sonner"
+import { toast } from "sonner"
 import '../Styles/PlanteMobile.css'
 
 export default function Plante({ props }) {
     let Total = props[1]
     let setTotal = props[2]
-    let Nombre = props[3]
-    let setNombre = props[4]
     let liste = props[5]
     let setListe = props[6]
     let prix = props[0].prix
     let ouverture = props[7]
-    let setOuverture = props[8]
     useEffect(() =>
         setnombre_local(0)
         , [Total == 0])

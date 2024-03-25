@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://belingantsama.github.io/Ts_jungle",
+  "homepage": "https://belingantsama.github.io/TS_Jungle",
   "dependencies": {
     "6": "^0.0.1",
     "@paypal/react-paypal-js": "^8.2.0",
