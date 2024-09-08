@@ -5,8 +5,6 @@ import logo_achat from '../images/logo_achat.png'
 
 
 export default function CarteMobile({ liste, setListe, Nombre, setNombre, Total, setTotal, ouverture, setOuverture }) {
-    const [Ouvert, setOuvert] = useState(true)
-    const [plantes, setPlantes] = useState([])
     const [liste_panier, setListe_panier] = useState([])
 
     useEffect(() => {
@@ -19,10 +17,10 @@ export default function CarteMobile({ liste, setListe, Nombre, setNombre, Total,
 
                 for (let j = i; j <= tableau.length - 1; j++) {
                     if (!occurrences.get(item.nom)) {
-                        if (i = j) {
+                        if (i === j) {
                             occurrences.set(tableau[j].nom, tableau[j].nombre)
                         }
-                        else if (item.nom == tableau[j].nom && i < j) {
+                        else if (item.nom === tableau[j].nom && i < j) {
                             occurrences.set(tableau[j].nom, tableau[j].nombre)
                         }
 
@@ -33,13 +31,11 @@ export default function CarteMobile({ liste, setListe, Nombre, setNombre, Total,
 
             return Array.from(occurrences);
 
-            // Maintenant, nous avons une Map avec les occurrences maximales pour chaque clé
-            return occurrences;
         }
 
         setListe_panier(obtenirOccurrenceMax(liste))
 
-    }, [Total])
+    }, [Total, liste])
 
     const Vider = () => {
         setTotal(0)
@@ -52,7 +48,7 @@ export default function CarteMobile({ liste, setListe, Nombre, setNombre, Total,
         <h2>Panier : </h2>
         <div className="resultat">
             <div>
-                <img className="logo_achat" src={logo_achat}></img>
+                <img className="logo_achat" src={logo_achat} alt=""></img>
                 <table>
                     {
 

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 
 
-export default function () {
+export default function NavMobile() {
 
     let a = document.getElementsByClassName('lien')
     
@@ -21,6 +21,7 @@ export default function () {
                 }
             }
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [url !== "/"])
 
     const Menu = document.getElementsByClassName('Menu')

@@ -47,7 +47,7 @@ export default function Footer() {
                 <a href="https://wa.me/237697420544"> <i class='bx bxl-whatsapp'></i></a>
 
 
-                <a href="#"> <i class='bx bxl-gmail'></i></a>
+                <a href="g@gmail.com"> <i class='bx bxl-gmail'></i></a>
 
 
             </div>

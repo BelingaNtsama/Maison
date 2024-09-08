@@ -6,13 +6,10 @@ import { useState, useEffect } from 'react'
 export default function Plante({ props }) {
     let Total = props[1]
     let setTotal = props[2]
-    let Nombre = props[3]
-    let setNombre = props[4]
     let liste = props[5]
     let setListe = props[6]
     let prix = props[0].prix
     let ouverture = props[7]
-    let setOuverture = props[8]
 
 
     // Exemple d'utilisation
@@ -35,11 +32,13 @@ export default function Plante({ props }) {
             toast.success(nombre_local <= 1 ? <span>{nombre_local} exemplaire de la {props[0].name} a ete retenu</span> :
                 <span>{nombre_local} exemplaires de la fleur {props[0].name} ont ete retenus</span>)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [fois === 2])
 
     useEffect(() =>
         setnombre_local(0),
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [Total === 0])
 
 
@@ -48,7 +47,8 @@ export default function Plante({ props }) {
         setTotal(0)
         setnombre_local(0)
         setunable(false)
-    }, [ouverture == true])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [ouverture === true])
 
     function changer(e, nombre) {
         e.preventDefault()

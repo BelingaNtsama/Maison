@@ -6,8 +6,7 @@ import { Link } from "react-router-dom"
 
 
 export default function Carte({ liste, setListe, Nombre, setNombre, Total, setTotal, ouverture,setOuverture }) {
-    const [Ouvert, setOuvert] = useState(true)
-    const [plantes, setPlantes] = useState([])
+    const [Ouvert] = useState(true)
     const [liste_panier, setListe_panier] = useState()
 
     useEffect(() => {
@@ -20,10 +19,10 @@ export default function Carte({ liste, setListe, Nombre, setNombre, Total, setTo
 
                 for (let j = i; j <= tableau.length - 1; j++) {
                     if (!occurrences.get(item.nom)) {
-                        if (i = j) {
+                        if (i === j) {
                             occurrences.set(tableau[j].nom, tableau[j].nombre)
                         }
-                        else if (item.nom == tableau[j].nom && i < j) {
+                        else if (item.nom === tableau[j].nom && i < j) {
                             occurrences.set(tableau[j].nom, tableau[j].nombre)
                         }
 
@@ -34,12 +33,11 @@ export default function Carte({ liste, setListe, Nombre, setNombre, Total, setTo
 
             return Array.from(occurrences);
 
-            // Maintenant, nous avons une Map avec les occurrences maximales pour chaque clé
-            return occurrences;
+            
         }
 
         setListe_panier(obtenirOccurrenceMax(liste))
-    }, [Total])
+    }, [Total, liste])
 
     const Vider = () => {
         setTotal(0)
@@ -50,7 +48,7 @@ export default function Carte({ liste, setListe, Nombre, setNombre, Total, setTo
 
     return Ouvert && Total <= 0 ? <h2>Panier vide</h2>  : <div className="cadre_carte">
         <h2>Panier : </h2>
-        <img className="logo_achat" src={logo_achat}></img>
+        <img className="logo_achat" src={logo_achat} alt=""></img>
 
         <table>
             {

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react"
 import { toast } from "sonner"
 import '../Styles/PlanteMobile.css'
@@ -11,7 +12,8 @@ export default function Plante({ props }) {
     let ouverture = props[7]
     useEffect(() =>
         setnombre_local(0)
-        , [Total == 0])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        , [Total === 0])
 
 
 
@@ -31,13 +33,14 @@ export default function Plante({ props }) {
         if (fois <= 2) {
             setunable(true)
         }
-    }, [fois == 2])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [fois === 2])
 
     useEffect(() => {
         setTotal_local(0)
         setnombre_local(0)
         setunable(false)
-    }, [ouverture == true])
+    }, [ouverture === true])
 
     function changer(e, nombre) {
         e.preventDefault()

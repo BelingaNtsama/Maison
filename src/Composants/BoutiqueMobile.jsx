@@ -108,8 +108,8 @@ export default function BoutiqueMobile({ liste, setListe, Nombre, setNombre, Tot
         </form>
         <div className='cadre_plantes'>
             
-                {plantList.filter((plante) => categorie != "" ? plante.category.toLowerCase().includes(categorie.toLowerCase()) :
-                    plante.category != undefined).filter((plante) => plante.name.toLowerCase().includes(nom.toLowerCase())).map((plante) =>
+                {plantList.filter((plante) => categorie !== "" ? plante.category.toLowerCase().includes(categorie.toLowerCase()) :
+                    plante.category !== undefined).filter((plante) => plante.name.toLowerCase().includes(nom.toLowerCase())).map((plante) =>
                         <PlanteMobile props={[plante, Total, setTotal, Nombre, setNombre, liste, setListe, ouverture, setOuverture]} />)
                 }
             

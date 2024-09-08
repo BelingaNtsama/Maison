@@ -1,7 +1,7 @@
 import { useRouteError, Link, useNavigate } from "react-router-dom";
 import '../Styles/Page_erreur.css'
 import { Toaster, toast } from "sonner";
-export default function Page_erreur() {
+export default function PageErreur() {
     const error = useRouteError();
     console.error(error);
     const navigate = useNavigate()

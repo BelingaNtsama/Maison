@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import '../Styles/Panier.css'
 import Carte from './Carte'
 

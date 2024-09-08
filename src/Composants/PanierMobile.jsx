@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import '../Styles/PanierMobile.css'
 import Carte from './CarteMobile'
 

@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Contact from '../src/Composants/Contact'
-import Page_erreur from './Composants/Page_erreur';
+import PageErreur from './Composants/Page-erreur';
 import Services from './Composants/Services';
 import About from './Composants/About';
 import Paiement from './Composants/Paiement';
@@ -26,7 +26,7 @@ const Route = createBrowserRouter([{
   element: <Paiement />
 }, {
   path: "*",
-  element: <Page_erreur />
+  element: <PageErreur />
 }])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
